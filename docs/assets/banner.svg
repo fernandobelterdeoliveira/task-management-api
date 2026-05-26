@@ -1,86 +1,131 @@
 <svg width="1280" height="360" viewBox="0 0 1280 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Task Management REST API</title>
-  <desc id="desc">Dark technology themed banner with Spring Boot green accents and API endpoint cards.</desc>
+  <desc id="desc">Professional dark banner for a Spring Boot task management REST API with clean architecture cards and green accents.</desc>
+
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="360" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0E0F12"/>
-      <stop offset="0.55" stop-color="#202123"/>
+    <linearGradient id="background" x1="0" y1="0" x2="1280" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B0D10"/>
+      <stop offset="0.5" stop-color="#111827"/>
       <stop offset="1" stop-color="#0E0F12"/>
     </linearGradient>
-    <linearGradient id="accent" x1="170" y1="60" x2="1110" y2="300" gradientUnits="userSpaceOnUse">
+
+    <linearGradient id="greenBlue" x1="250" y1="42" x2="1030" y2="318" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#10A37F"/>
       <stop offset="1" stop-color="#2B8FFF"/>
     </linearGradient>
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="12" result="blur"/>
-      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.0627 0 0 0 0 0.6392 0 0 0 0 0.498 0 0 0 0.42 0"/>
-      <feBlend in="SourceGraphic" mode="screen"/>
+
+    <radialGradient id="haloGreen" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(245 160) rotate(24) scale(360 210)">
+      <stop stop-color="#10A37F" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#10A37F" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="haloBlue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1045 130) rotate(145) scale(300 180)">
+      <stop stop-color="#2B8FFF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#2B8FFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.38"/>
     </filter>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#40434A" stroke-width="1" opacity="0.35"/>
+
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" stroke="#FFFFFF" stroke-opacity="0.045" stroke-width="1"/>
     </pattern>
+
+    <clipPath id="round">
+      <rect width="1280" height="360" rx="30"/>
+    </clipPath>
   </defs>
 
-  <rect width="1280" height="360" rx="28" fill="url(#bg)"/>
-  <rect width="1280" height="360" rx="28" fill="url(#grid)" opacity="0.65"/>
+  <g clip-path="url(#round)">
+    <rect width="1280" height="360" fill="url(#background)"/>
+    <rect width="1280" height="360" fill="url(#grid)"/>
+    <rect width="1280" height="360" fill="url(#haloGreen)"/>
+    <rect width="1280" height="360" fill="url(#haloBlue)"/>
 
-  <path d="M80 260 C220 105 370 305 510 160 C665 0 800 340 960 145 C1045 42 1135 80 1210 135" stroke="url(#accent)" stroke-width="3" opacity="0.75" filter="url(#softGlow)">
-    <animate attributeName="stroke-dasharray" values="8 22;22 8;8 22" dur="6s" repeatCount="indefinite"/>
-  </path>
+    <path d="M-70 310C96 218 181 255 306 159C448 50 565 47 720 132C844 200 938 226 1117 104C1193 52 1272 42 1355 63" stroke="url(#greenBlue)" stroke-opacity="0.38" stroke-width="2"/>
+    <path d="M-45 318C123 226 200 270 323 174C456 70 570 70 716 148C850 220 958 247 1140 122C1200 81 1262 68 1335 80" stroke="url(#greenBlue)" stroke-opacity="0.18" stroke-width="10"/>
 
-  <g opacity="0.9">
-    <circle cx="105" cy="82" r="4" fill="#10A37F">
-      <animate attributeName="opacity" values="0.35;1;0.35" dur="3s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1138" cy="91" r="4" fill="#2B8FFF">
-      <animate attributeName="opacity" values="1;0.35;1" dur="3.2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1040" cy="286" r="4" fill="#10A37F">
-      <animate attributeName="opacity" values="0.45;1;0.45" dur="2.7s" repeatCount="indefinite"/>
-    </circle>
-  </g>
+    <g transform="translate(76 58)" filter="url(#shadow)">
+      <rect width="610" height="244" rx="24" fill="#0E0F12" fill-opacity="0.82" stroke="#2A2F38"/>
 
-  <g transform="translate(74 70)">
-    <rect x="0" y="0" width="570" height="220" rx="20" fill="#0E0F12" opacity="0.82" stroke="#40434A"/>
-    <text x="34" y="62" fill="#F5F7FA" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="700">Task Management REST API</text>
-    <text x="36" y="102" fill="#9EA1AA" font-family="Inter, Arial, sans-serif" font-size="20">Clean Java Spring Boot API for managing tasks</text>
+      <g transform="translate(34 31)">
+        <rect width="156" height="34" rx="17" fill="#10A37F" fill-opacity="0.14" stroke="#10A37F" stroke-opacity="0.55"/>
+        <circle cx="22" cy="17" r="5" fill="#10A37F"/>
+        <text x="38" y="22" fill="#B6F4E6" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="0">SPRING BOOT API</text>
+      </g>
 
-    <g transform="translate(36 138)">
-      <rect x="0" y="0" width="96" height="34" rx="17" fill="#10A37F" opacity="0.16" stroke="#10A37F"/>
-      <text x="18" y="23" fill="#10A37F" font-family="IBM Plex Mono, Menlo, monospace" font-size="14" font-weight="700">CRUD</text>
+      <text x="34" y="111" fill="#F5F7FA" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800" letter-spacing="0">Task Management</text>
+      <text x="34" y="160" fill="#F5F7FA" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800" letter-spacing="0">REST API</text>
+      <text x="36" y="200" fill="#AAB0BC" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="400" letter-spacing="0">Clean Java backend for CRUD, validation, JPA and H2.</text>
 
-      <rect x="112" y="0" width="86" height="34" rx="17" fill="#2B8FFF" opacity="0.16" stroke="#2B8FFF"/>
-      <text x="134" y="23" fill="#2B8FFF" font-family="IBM Plex Mono, Menlo, monospace" font-size="14" font-weight="700">JPA</text>
-
-      <rect x="214" y="0" width="88" height="34" rx="17" fill="#10A37F" opacity="0.16" stroke="#10A37F"/>
-      <text x="237" y="23" fill="#10A37F" font-family="IBM Plex Mono, Menlo, monospace" font-size="14" font-weight="700">H2</text>
-
-      <rect x="318" y="0" width="132" height="34" rx="17" fill="#2B8FFF" opacity="0.16" stroke="#2B8FFF"/>
-      <text x="338" y="23" fill="#2B8FFF" font-family="IBM Plex Mono, Menlo, monospace" font-size="14" font-weight="700">VALIDATION</text>
+      <g transform="translate(36 220)" font-family="IBM Plex Mono, Menlo, monospace" font-size="12" font-weight="700">
+        <text x="0" y="0" fill="#10A37F">JAVA 17</text>
+        <text x="82" y="0" fill="#40434A">/</text>
+        <text x="103" y="0" fill="#2B8FFF">MAVEN</text>
+        <text x="166" y="0" fill="#40434A">/</text>
+        <text x="187" y="0" fill="#10A37F">H2 DATABASE</text>
+      </g>
     </g>
-  </g>
 
-  <g transform="translate(735 58)" font-family="IBM Plex Mono, Menlo, monospace">
-    <rect x="0" y="0" width="430" height="244" rx="18" fill="#202123" opacity="0.92" stroke="#40434A"/>
-    <rect x="22" y="24" width="386" height="42" rx="10" fill="#0E0F12" stroke="#40434A"/>
-    <text x="42" y="51" fill="#10A37F" font-size="16" font-weight="700">GET</text>
-    <text x="96" y="51" fill="#F5F7FA" font-size="16">/api/tasks</text>
+    <g transform="translate(742 52)" filter="url(#shadow)">
+      <rect width="438" height="256" rx="24" fill="#111827" fill-opacity="0.88" stroke="#2A2F38"/>
 
-    <rect x="22" y="78" width="386" height="42" rx="10" fill="#0E0F12" stroke="#40434A"/>
-    <text x="42" y="105" fill="#2B8FFF" font-size="16" font-weight="700">POST</text>
-    <text x="104" y="105" fill="#F5F7FA" font-size="16">/api/tasks</text>
+      <g transform="translate(28 27)">
+        <text x="0" y="0" dominant-baseline="hanging" fill="#F5F7FA" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Clean Architecture Flow</text>
+        <text x="0" y="28" dominant-baseline="hanging" fill="#8D96A6" font-family="Inter, Arial, sans-serif" font-size="13">Controller to Service to Repository to H2</text>
+      </g>
 
-    <rect x="22" y="132" width="386" height="42" rx="10" fill="#0E0F12" stroke="#40434A"/>
-    <text x="42" y="159" fill="#10A37F" font-size="16" font-weight="700">PUT</text>
-    <text x="96" y="159" fill="#F5F7FA" font-size="16">/api/tasks/{id}</text>
+      <g transform="translate(28 82)" font-family="Inter, Arial, sans-serif">
+        <rect x="0" y="0" width="176" height="44" rx="12" fill="#0E0F12" stroke="#334155"/>
+        <text x="18" y="28" fill="#F5F7FA" font-size="14" font-weight="700">Controller</text>
+        <circle cx="152" cy="22" r="6" fill="#10A37F"/>
 
-    <rect x="22" y="186" width="386" height="42" rx="10" fill="#0E0F12" stroke="#40434A"/>
-    <text x="42" y="213" fill="#2B8FFF" font-size="16" font-weight="700">PATCH</text>
-    <text x="114" y="213" fill="#F5F7FA" font-size="16">/api/tasks/{id}/status</text>
-  </g>
+        <rect x="226" y="0" width="176" height="44" rx="12" fill="#0E0F12" stroke="#334155"/>
+        <text x="244" y="28" fill="#F5F7FA" font-size="14" font-weight="700">Service</text>
+        <circle cx="378" cy="22" r="6" fill="#2B8FFF"/>
 
-  <g transform="translate(665 180)" opacity="0.82">
-    <path d="M0 0 H46" stroke="#10A37F" stroke-width="3"/>
-    <path d="M34 -10 L48 0 L34 10" stroke="#10A37F" stroke-width="3" fill="none"/>
+        <path d="M185 22H217" stroke="#10A37F" stroke-width="2"/>
+        <path d="M211 15L218 22L211 29" stroke="#10A37F" stroke-width="2" fill="none"/>
+
+        <rect x="0" y="68" width="176" height="44" rx="12" fill="#0E0F12" stroke="#334155"/>
+        <text x="18" y="96" fill="#F5F7FA" font-size="14" font-weight="700">Repository</text>
+        <circle cx="152" cy="90" r="6" fill="#2B8FFF"/>
+
+        <rect x="226" y="68" width="176" height="44" rx="12" fill="#0E0F12" stroke="#334155"/>
+        <text x="244" y="96" fill="#F5F7FA" font-size="14" font-weight="700">H2 Database</text>
+        <circle cx="378" cy="90" r="6" fill="#10A37F"/>
+
+        <path d="M314 48V60C314 64.4 310.4 68 306 68H96C91.6 68 88 64.4 88 60V52" stroke="#475569" stroke-width="2"/>
+        <path d="M185 90H217" stroke="#2B8FFF" stroke-width="2"/>
+        <path d="M211 83L218 90L211 97" stroke="#2B8FFF" stroke-width="2" fill="none"/>
+      </g>
+
+      <g transform="translate(28 218)" font-family="IBM Plex Mono, Menlo, monospace" font-size="13" font-weight="700">
+        <rect width="382" height="1" fill="#2A2F38"/>
+        <text x="0" y="27" fill="#10A37F">GET</text>
+        <text x="42" y="27" fill="#AAB0BC">/api/tasks</text>
+        <text x="176" y="27" fill="#2B8FFF">POST</text>
+        <text x="232" y="27" fill="#AAB0BC">/api/tasks</text>
+      </g>
+    </g>
+
+    <g transform="translate(702 158)">
+      <circle cx="0" cy="0" r="4" fill="#10A37F"/>
+      <path d="M8 0H32" stroke="#10A37F" stroke-width="2"/>
+      <path d="M26 -6L33 0L26 6" stroke="#10A37F" stroke-width="2" fill="none"/>
+    </g>
+
+    <g opacity="0.55">
+      <circle cx="1195" cy="52" r="3" fill="#10A37F">
+        <animate attributeName="opacity" values="0.35;1;0.35" dur="2.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1235" cy="300" r="3" fill="#2B8FFF">
+        <animate attributeName="opacity" values="1;0.35;1" dur="3.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="58" cy="318" r="3" fill="#10A37F">
+        <animate attributeName="opacity" values="0.45;1;0.45" dur="3.6s" repeatCount="indefinite"/>
+      </circle>
+    </g>
   </g>
 </svg>
